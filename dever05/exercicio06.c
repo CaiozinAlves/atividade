@@ -3,11 +3,13 @@
 main() {
     int numero;
     
-    printf("Digite um número inteiro: ");
+    printf("\nDigite um numero inteiro: ");
     scanf("%d", &numero);
+
+    printf("\n ----------Resultado----------\n");
     
     if (numero % 2 == 0) {
-        printf("O número digitado é par.\n");
+        printf("\nO numero digitado e par.\n");
     }
     
    
