@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Definição da estrutura do veículo
+
 typedef struct Veiculo {
     char proprietario[50];
     char combustivel[20];
@@ -14,7 +14,7 @@ typedef struct Veiculo {
     struct Veiculo *proximo;
 } Veiculo;
 
-// Função para adicionar um novo veículo à lista
+
 void adicionarVeiculo(Veiculo **inicio) {
     Veiculo *novoVeiculo = (Veiculo *)malloc(sizeof(Veiculo));
     if (novoVeiculo == NULL) {
@@ -43,7 +43,7 @@ void adicionarVeiculo(Veiculo **inicio) {
     printf("Veiculo adicionado com sucesso!\n");
 }
 
-// Função para listar proprietários de carros do ano 2010 ou posterior movidos a diesel
+
 void listarDieselAno2010OuPosterior(Veiculo *inicio) {
       Veiculo *atual = inicio;
       int encontrados = 0;
@@ -58,7 +58,7 @@ void listarDieselAno2010OuPosterior(Veiculo *inicio) {
           printf("Nenhum veiculo encontrado com os critérios especificados.\n");
       }
   }
-// Função para listar placas que comecem com a letra J e terminem com 0, 2, 4 ou 7 e seus respectivos proprietários
+
 void listarPlacasComJ(Veiculo *inicio) {
       Veiculo *atual = inicio;
       int encontrados = 0;
@@ -74,12 +74,12 @@ void listarPlacasComJ(Veiculo *inicio) {
       }
   }
 
-// Função para verificar se um número é par
+
 int ehPar(int numero) {
     return numero % 2 == 0;
 }
 
-// Função para listar modelo e cor dos veículos com placas tendo como segunda letra uma vogal e soma dos valores numéricos par
+
 void listarModeloCorPlacasEspecificas(Veiculo *inicio) {
       Veiculo *atual = inicio;
       int encontrados = 0;
@@ -101,7 +101,7 @@ void listarModeloCorPlacasEspecificas(Veiculo *inicio) {
       }
 }
 
-// Função para realizar a troca de proprietário com base no número do chassi
+
 void trocarProprietarioPorChassi(Veiculo *inicio, char chassiBuscado[], char novoProprietario[]) {
    Veiculo *atual = inicio;
       while (atual != NULL) {
@@ -132,7 +132,7 @@ void liberarLista(Veiculo *inicio) {
     }
 }
 
-// Função principal para testar as funcionalidades
+
 int main() {
     Veiculo *listaVeiculos = NULL;
     int opcao;
